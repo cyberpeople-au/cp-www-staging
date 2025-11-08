@@ -1,0 +1,523 @@
+/* ====================================
+   Industry Landing Pages - Styles
+   ==================================== */
+
+/* Industry Hero Section */
+.industry-hero {
+    background: linear-gradient(135deg, #17a2b8 0%, #138496 100%);
+    color: #ffffff;
+    padding: 5rem 0;
+    text-align: center;
+}
+
+.industry-hero h1 {
+    color: #ffffff;
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.industry-hero .hero-subheadline {
+    font-size: 1.25rem;
+    max-width: 800px;
+    margin: 0 auto 2rem;
+    line-height: 1.6;
+}
+
+/* Threat Section */
+.threat-section {
+    padding: var(--spacing-xl) 0;
+    background-color: #ffffff;
+}
+
+.threat-section h2 {
+    text-align: center;
+    margin-bottom: var(--spacing-sm);
+}
+
+.section-intro {
+    text-align: center;
+    font-size: 1.125rem;
+    color: var(--secondary-text);
+    max-width: 800px;
+    margin: 0 auto var(--spacing-lg);
+}
+
+.threat-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: var(--spacing-md);
+    max-width: 1000px;
+    margin: 0 auto;
+    justify-items: center;
+}
+
+.threat-grid > * {
+    width: 100%;
+    max-width: 350px;
+}
+
+.threat-card {
+    background: var(--bg-color);
+    padding: var(--spacing-lg);
+    border-radius: 8px;
+    border-top: 4px solid var(--primary-color);
+    transition: var(--transition);
+    text-align: center;
+}
+
+.threat-card:hover {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    transform: translateY(-4px);
+}
+
+.threat-icon {
+    margin-bottom: var(--spacing-md);
+    display: flex;
+    justify-content: center;
+}
+
+.threat-icon svg {
+    width: 64px;
+    height: 64px;
+}
+
+.threat-card h3 {
+    color: var(--primary-color);
+    font-size: 1.25rem;
+    margin-bottom: var(--spacing-sm);
+}
+
+.threat-card p {
+    color: var(--secondary-text);
+    margin: 0;
+    line-height: 1.6;
+    text-align: center;
+}
+
+/* Security Gaps Section */
+.gaps-section {
+    padding: var(--spacing-xl) 0;
+    background-color: var(--bg-color);
+}
+
+.gaps-section h2 {
+    text-align: center;
+    margin-bottom: var(--spacing-sm);
+}
+
+.gaps-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: var(--spacing-md);
+}
+
+.gap-item {
+    background: #ffffff;
+    padding: var(--spacing-md);
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+    transition: var(--transition);
+}
+
+.gap-item:hover {
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+    transform: translateY(-2px);
+}
+
+.gap-icon {
+    width: 40px;
+    height: 40px;
+    background-color: var(--primary-color);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: var(--spacing-sm);
+}
+
+.gap-icon svg {
+    width: 24px;
+    height: 24px;
+}
+
+.gap-item h4 {
+    color: var(--text-color);
+    margin-bottom: var(--spacing-sm);
+    font-size: 1.125rem;
+}
+
+.gap-item ul {
+    padding-left: var(--spacing-md);
+}
+
+.gap-item li {
+    list-style: disc;
+    color: var(--secondary-text);
+    padding: 0.25rem 0;
+    line-height: 1.5;
+}
+
+/* Regulatory Context Section */
+.regulatory-section {
+    padding: var(--spacing-xl) 0;
+    background-color: #ffffff;
+}
+
+.regulatory-section h2 {
+    text-align: center;
+    margin-bottom: var(--spacing-sm);
+}
+
+.regulatory-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: var(--spacing-md);
+}
+
+.regulatory-card {
+    background: var(--bg-color);
+    padding: var(--spacing-lg);
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+}
+
+.regulatory-card h3 {
+    color: var(--primary-color);
+    margin-bottom: var(--spacing-sm);
+}
+
+.regulatory-card p {
+    color: var(--secondary-text);
+    line-height: 1.6;
+}
+
+.regulatory-card ul {
+    padding-left: var(--spacing-md);
+    margin-top: var(--spacing-sm);
+}
+
+.regulatory-card li {
+    list-style: disc;
+    color: var(--secondary-text);
+    padding: 0.25rem 0;
+}
+
+/* Certification Tiers Section */
+.certification-section {
+    padding: var(--spacing-xl) 0;
+    background-color: var(--bg-color);
+}
+
+.certification-section h2 {
+    text-align: center;
+    margin-bottom: var(--spacing-lg);
+}
+
+.tier-card {
+    background: #ffffff;
+    padding: var(--spacing-lg);
+    border-radius: 8px;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+    margin-bottom: var(--spacing-lg);
+    border-top: 5px solid;
+}
+
+.bronze-tier {
+    border-top-color: #cd7f32;
+}
+
+.silver-tier {
+    border-top-color: #c0c0c0;
+}
+
+.gold-tier {
+    border-top-color: #ffd700;
+}
+
+.tier-header {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-md);
+    margin-bottom: var(--spacing-md);
+}
+
+.tier-badge {
+    display: inline-block;
+    padding: 0.5rem 1.5rem;
+    border-radius: 20px;
+    font-weight: 700;
+    font-size: 0.875rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.bronze-tier .tier-badge {
+    background-color: #cd7f32;
+    color: #ffffff;
+}
+
+.silver-tier .tier-badge {
+    background-color: #c0c0c0;
+    color: #ffffff;
+}
+
+.gold-tier .tier-badge {
+    background-color: #ffd700;
+    color: #1a1a1a;
+}
+
+.tier-header h3 {
+    margin: 0;
+    color: var(--text-color);
+}
+
+.tier-description {
+    margin-bottom: var(--spacing-md);
+    font-weight: 500;
+}
+
+.tier-list {
+    padding-left: var(--spacing-md);
+    margin-bottom: var(--spacing-md);
+}
+
+.tier-list li {
+    list-style: disc;
+    color: var(--secondary-text);
+    padding: 0.5rem 0;
+    line-height: 1.6;
+}
+
+.tier-note {
+    margin-top: var(--spacing-md);
+    padding-top: var(--spacing-md);
+    border-top: 1px solid var(--border-color);
+    font-style: italic;
+    color: var(--secondary-text);
+}
+
+.appropriate-for {
+    margin-top: var(--spacing-md);
+    padding: var(--spacing-md);
+    background-color: var(--bg-color);
+    border-radius: 6px;
+}
+
+.appropriate-for h4 {
+    color: var(--text-color);
+    margin-bottom: var(--spacing-xs);
+    font-size: 1rem;
+}
+
+.appropriate-for ul {
+    padding-left: var(--spacing-md);
+}
+
+.appropriate-for li {
+    list-style: disc;
+    color: var(--secondary-text);
+    padding: 0.25rem 0;
+}
+
+/* Implementation Section */
+.implementation-section {
+    padding: var(--spacing-xl) 0;
+    background-color: #ffffff;
+}
+
+.implementation-section h2 {
+    text-align: center;
+    margin-bottom: var(--spacing-sm);
+}
+
+.implementation-phases {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: var(--spacing-md);
+    margin-bottom: var(--spacing-md);
+}
+
+.phase-card {
+    background: var(--bg-color);
+    padding: var(--spacing-lg);
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+    position: relative;
+}
+
+.phase-number {
+    width: 50px;
+    height: 50px;
+    background: var(--primary-color);
+    color: #ffffff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: var(--spacing-md);
+}
+
+.phase-card h3 {
+    color: var(--text-color);
+    margin-bottom: var(--spacing-md);
+    font-size: 1.25rem;
+}
+
+.phase-card ul {
+    padding-left: var(--spacing-md);
+}
+
+.phase-card li {
+    list-style: disc;
+    color: var(--secondary-text);
+    padding: 0.25rem 0;
+    line-height: 1.5;
+}
+
+.implementation-note {
+    max-width: 900px;
+    margin: var(--spacing-lg) auto 0;
+    padding: var(--spacing-md);
+    background-color: var(--bg-color);
+    border-radius: 6px;
+    border-left: 4px solid var(--primary-color);
+    text-align: center;
+}
+
+/* Outcomes Section */
+.outcomes-section {
+    padding: var(--spacing-xl) 0;
+    background-color: var(--bg-color);
+}
+
+.outcomes-section h2 {
+    text-align: center;
+    margin-bottom: var(--spacing-lg);
+}
+
+.outcomes-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: var(--spacing-md);
+}
+
+.outcome-card {
+    background: #ffffff;
+    padding: var(--spacing-md);
+    border-radius: 6px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+    transition: var(--transition);
+    text-align: center;
+}
+
+.outcome-card:hover {
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+    transform: translateY(-2px);
+}
+
+.outcome-icon {
+    width: 50px;
+    height: 50px;
+    background-color: rgba(23, 162, 184, 0.1);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto var(--spacing-sm);
+}
+
+.outcome-icon svg {
+    width: 28px;
+    height: 28px;
+}
+
+.outcome-card h4 {
+    color: var(--primary-color);
+    margin-bottom: var(--spacing-xs);
+}
+
+.outcome-card p {
+    color: var(--secondary-text);
+    margin: 0;
+    line-height: 1.6;
+    text-align: center;
+}
+
+/* FAQ Section */
+.faq-section {
+    padding: var(--spacing-xl) 0;
+    background-color: #ffffff;
+}
+
+.faq-section h2 {
+    text-align: center;
+    margin-bottom: var(--spacing-lg);
+}
+
+.faq-list {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.faq-item {
+    background: var(--bg-color);
+    padding: var(--spacing-md);
+    border-radius: 8px;
+    margin-bottom: var(--spacing-md);
+    border-left: 4px solid var(--primary-color);
+}
+
+.faq-item h4 {
+    color: var(--text-color);
+    margin-bottom: var(--spacing-sm);
+    font-size: 1.125rem;
+}
+
+.faq-item p {
+    color: var(--secondary-text);
+    margin: 0;
+    line-height: 1.6;
+}
+
+/* Responsive Adjustments for Industry Pages */
+@media (max-width: 768px) {
+    .industry-hero h1 {
+        font-size: 2rem;
+    }
+
+    .industry-hero .hero-subheadline {
+        font-size: 1.125rem;
+    }
+
+    .threat-grid,
+    .gaps-grid,
+    .regulatory-content,
+    .implementation-phases,
+    .outcomes-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .tier-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: var(--spacing-sm);
+    }
+}
+
+@media (max-width: 480px) {
+    .industry-hero h1 {
+        font-size: 1.75rem;
+    }
+
+    .industry-hero {
+        padding: 3rem 0;
+    }
+
+    .phase-number {
+        width: 40px;
+        height: 40px;
+        font-size: 1.25rem;
+    }
+}
