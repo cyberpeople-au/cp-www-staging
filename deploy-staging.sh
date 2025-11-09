@@ -37,7 +37,8 @@ if [[ -n "$MODIFIED" ]]; then
 fi
 
 echo -e "${GREEN}Step 1: Syncing files to staging server...${NC}"
-rsync -avz --delete \
+# Note: No --delete flag to preserve server-specific files (Docker configs)
+rsync -avz \
     --exclude='.git/' \
     --exclude='.gitignore' \
     --exclude='buildfiles/' \
@@ -49,6 +50,9 @@ rsync -avz --delete \
     --exclude='.venv/' \
     --exclude='.claude/' \
     --exclude='__pycache__/' \
+    --exclude='Dockerfile' \
+    --exclude='docker-compose.yml' \
+    --exclude='nginx.conf' \
     ./ ${REMOTE_USER}@${REMOTE_HOST}:${REMOTE_PATH}/
 
 echo ""
