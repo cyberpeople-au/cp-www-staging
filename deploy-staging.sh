@@ -22,10 +22,11 @@ echo -e "${GREEN}Cyber People - Staging Deployment${NC}"
 echo -e "${GREEN}=====================================${NC}"
 echo ""
 
-# Check if we have uncommitted changes
-if [[ -n $(git status -s) ]]; then
-    echo -e "${YELLOW}You have uncommitted changes:${NC}"
-    git status -s
+# Check if we have uncommitted changes to tracked files
+MODIFIED=$(git diff --name-only)
+if [[ -n "$MODIFIED" ]]; then
+    echo -e "${YELLOW}You have uncommitted changes to tracked files:${NC}"
+    echo "$MODIFIED"
     echo ""
     read -p "Continue with deployment? (y/n) " -n 1 -r
     echo
