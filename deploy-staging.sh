@@ -8,8 +8,8 @@ set -e  # Exit on error
 # Configuration
 REMOTE_USER="developer"
 REMOTE_HOST="staging"
-REMOTE_PATH="/home/developer/cyber-people-staging"
-CONTAINER_NAME="cyber-people-staging"
+REMOTE_PATH="/home/developer/cp-www-staging"
+CONTAINER_NAME="cp-www-staging"
 
 # Colors for output
 GREEN='\033[0;32m'
@@ -58,7 +58,7 @@ rsync -avz \
 echo ""
 echo -e "${GREEN}Step 2: Rebuilding Docker container...${NC}"
 ssh ${REMOTE_USER}@${REMOTE_HOST} << 'EOF'
-cd /home/developer/cyber-people-staging
+cd /home/developer/cp-www-staging
 sudo docker compose down
 sudo docker compose build --no-cache
 sudo docker compose up -d
@@ -66,7 +66,7 @@ EOF
 
 echo ""
 echo -e "${GREEN}Step 3: Verifying deployment...${NC}"
-ssh ${REMOTE_USER}@${REMOTE_HOST} "sudo docker ps | grep cyber-people-staging"
+ssh ${REMOTE_USER}@${REMOTE_HOST} "sudo docker ps | grep cp-www-staging"
 
 echo ""
 echo -e "${GREEN}=====================================${NC}"
