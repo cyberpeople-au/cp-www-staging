@@ -46,15 +46,18 @@ rsync -avz --delete \
     --exclude='*.py' \
     --exclude='deploy-staging.sh' \
     --exclude='.DS_Store' \
+    --exclude='.venv/' \
+    --exclude='.claude/' \
+    --exclude='__pycache__/' \
     ./ ${REMOTE_USER}@${REMOTE_HOST}:${REMOTE_PATH}/
 
 echo ""
 echo -e "${GREEN}Step 2: Rebuilding Docker container...${NC}"
 ssh ${REMOTE_USER}@${REMOTE_HOST} << 'EOF'
 cd /home/developer/cyber-people-staging
-sudo docker-compose down
-sudo docker-compose build --no-cache
-sudo docker-compose up -d
+sudo docker compose down
+sudo docker compose build --no-cache
+sudo docker compose up -d
 EOF
 
 echo ""
