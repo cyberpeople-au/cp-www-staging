@@ -37,3 +37,8 @@ build/
 # Temporary files
 tmp/
 temp/
+
+# Quiz server
+quiz-server/node_modules/
+quiz-server/.env
+quiz-server/*.log

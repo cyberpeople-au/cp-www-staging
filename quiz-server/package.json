@@ -1,0 +1,25 @@
+{
+  "name": "cyberquiz-server",
+  "version": "1.0.0",
+  "description": "Backend API server for Cyber People cybersecurity assessment quiz",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "start": "node index.js",
+    "test:notion": "node test-notion.js"
+  },
+  "keywords": [
+    "cybersecurity",
+    "assessment",
+    "notion",
+    "api"
+  ],
+  "author": "Cyber People",
+  "license": "UNLICENSED",
+  "dependencies": {
+    "@notionhq/client": "^5.4.0",
+    "cors": "^2.8.5",
+    "dotenv": "^17.2.3",
+    "express": "^5.1.0"
+  }
+}
